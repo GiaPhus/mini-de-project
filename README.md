@@ -224,15 +224,37 @@ These files are generated only if rejected records exist.
 
 **File:** `quality_report.json`
 
-The quality report provides structured metrics for monitoring pipeline health and data quality, including:
+The quality report exposes key metrics at each stage of the pipeline to make data quality issues and data loss explicit.
 
-- Input record counts
-- Records rejected during data quality validation
-- Records removed due to deduplication
-- Orphan item counts
-- Business-level metrics such as completed orders and total revenue
+Key concepts used in the report:
 
-The report is designed to make data loss at each stage explicit and easy to reason about.
+- **Input counts**  
+  Total number of records read from the raw orders and order items files.
+
+- **after_dq**  
+  Number of records that passed basic data quality validation  
+  (e.g. required fields present, valid numeric values).
+
+- **rejected_dq**  
+  Records rejected due to failing data quality rules.
+
+- **deduplicated**  
+  Order records removed during deduplication  
+  (multiple records with the same `order_id`, keeping the latest `ingested_at`).
+
+- **rejected_orphan**  
+  Order item records rejected because their `order_id` does not exist in valid orders.
+
+- **final_valid**  
+  Records that remain after all validation and deduplication steps and are eligible for business logic.
+
+- **Business metrics**  
+  Number of completed orders, orders contributing to revenue, and total revenue for the given `run_date`.
+
+Overall, the quality report makes it easy to understand:
+- How much data is rejected at each stage  
+- Why data is rejected (data quality vs. deduplication vs. orphan checks)  
+- How raw input volumes translate into final business metrics
 
 ---
 

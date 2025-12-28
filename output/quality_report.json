@@ -1,24 +1,24 @@
 {
   "run_date": "2024-01-01",
   "input": {
-    "orders": 6,
+    "orders": 5,
     "order_items": 6
   },
   "orders": {
-    "after_dq": 0,
-    "rejected_dq": 6,
-    "deduplicated": 0,
-    "final_valid": 0
+    "after_dq": 5,
+    "rejected_dq": 0,
+    "deduplicated": 1,
+    "final_valid": 4
   },
   "order_items": {
     "after_dq": 4,
     "rejected_dq": 2,
-    "rejected_orphan": 4,
-    "final_valid": 0
+    "rejected_orphan": 1,
+    "final_valid": 3
   },
   "business": {
-    "completed_orders": 0,
-    "orders_with_revenue": 0,
-    "total_revenue": 0.0
+    "completed_orders": 3,
+    "orders_with_revenue": 2,
+    "total_revenue": 70.0
   }
 }
