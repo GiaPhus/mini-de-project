@@ -25,8 +25,6 @@ Raw CSV Inputs
 → Business Transformation  
 → Outputs & Monitoring
 
----
-
 ### 2.2 Workflow Description
 
 1. **Raw Input**  

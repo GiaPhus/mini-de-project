@@ -225,11 +225,9 @@ def main(run_date: str, input_dir: str, output_dir: str) -> None:
 
     daily_revenue.to_csv(out_path / "daily_revenue.csv", index=False)
 
-    if not rejected_orders.empty:
-        rejected_orders.to_csv(out_path / "rejected_orders.csv", index=False)
+    rejected_orders.to_csv(out_path / "rejected_orders.csv", index=False)
 
-    if not rejected_items.empty:
-        rejected_items.to_csv(out_path / "rejected_items.csv", index=False)
+    rejected_items.to_csv(out_path / "rejected_items.csv", index=False)
 
     report = build_quality_report(
     run_date,
