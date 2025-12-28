@@ -208,7 +208,6 @@ def main(run_date: str, input_dir: str, output_dir: str) -> None:
     valid_orders, rejected_orders, orders_after_dq, orders_rejected_dq, orders_deduped = (
     stage_and_validate_orders(orders)
     )
-
     (
         valid_items,
         rejected_items,

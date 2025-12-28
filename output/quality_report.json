@@ -1,0 +1,24 @@
+{
+  "run_date": "2024-01-01",
+  "input": {
+    "orders": 6,
+    "order_items": 6
+  },
+  "orders": {
+    "after_dq": 0,
+    "rejected_dq": 6,
+    "deduplicated": 0,
+    "final_valid": 0
+  },
+  "order_items": {
+    "after_dq": 4,
+    "rejected_dq": 2,
+    "rejected_orphan": 4,
+    "final_valid": 0
+  },
+  "business": {
+    "completed_orders": 0,
+    "orders_with_revenue": 0,
+    "total_revenue": 0.0
+  }
+}
